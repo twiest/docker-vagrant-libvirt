@@ -12,14 +12,18 @@ docker build -t vagrant_libvirt:latest .
 
 Run
 ===
-docker run --rm --privileged=true -v /var/lib/libvirt:/var/lib/libvirt -v /var/run/libvirt:/var/run/libvirt -v /var/lib/ctr-vagrant-libvirt:/persistent-data -ti vagrant_libvirt
+docker run --rm --privileged=true --net=host -v /var/lib/libvirt:/var/lib/libvirt -v /var/run/libvirt:/var/run/libvirt -v /var/lib/ctr-vagrant-libvirt:/persistent-data -ti vagrant_libvirt
 
 
 Notes
 =====
+* This container has to run with --net=host so that vagrant can talk to the launched VMs
+
 * This container has to run priviledged so that it can communicate with the libvirt socket
 
 * Libvirt must still be setup on the host machine. See the section "KVM/QEMU installation" from here: https://ttboj.wordpress.com/2014/05/13/vagrant-on-fedora-with-libvirt-reprise/
+
+* /var/lib/libvirt and /var/run/libvirt are both mounted into the docker container so that it can interact with libvirt
 
 * libvirt commands work inside the docker container. For example: virsh list --all
 

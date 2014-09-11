@@ -32,3 +32,5 @@ popd &> /dev/null
 
 # Source the vagrant embedded ruby env if it exists
 [ -f /root/.bashrc_vagrant.sh ] && source /root/.bashrc_vagrant.sh
+
+export PS1='[\u@ctr-vagrant-libvirt \W]\$ '
