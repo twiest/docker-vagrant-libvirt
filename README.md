@@ -12,7 +12,7 @@ docker build -t vagrant_libvirt:latest .
 
 Run
 ===
-docker run --rm --privileged=true -v /var/run/libvirt:/var/run/libvirt -v /var/lib/ctr-vagrant-libvirt:/persistent-data -ti vagrant_libvirt
+docker run --rm --privileged=true -v /var/lib/libvirt:/var/lib/libvirt -v /var/run/libvirt:/var/run/libvirt -v /var/lib/ctr-vagrant-libvirt:/persistent-data -ti vagrant_libvirt
 
 
 Notes
