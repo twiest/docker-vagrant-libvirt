@@ -14,7 +14,7 @@ ENV TERM xterm
 RUN yum update -y ; yum clean all
 
 # Install all deps
-RUN yum install -y patch libyaml-devel libffi-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel openssl-devel bzip2 automake libtool bison wget tree vim screen mtr nmap telnet tar git make ; yum clean all
+RUN yum install -y patch libyaml-devel libffi-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel openssl-devel bzip2 automake libtool bison wget tree vim screen mtr nmap telnet tar git make bash-completion ; yum clean all
 
 # Install vagrant
 RUN yum install -y https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.rpm ; yum clean all
