@@ -22,3 +22,8 @@ Notes
 * Libvirt must still be setup on the host machine. See the section "KVM/QEMU installation" from here: https://ttboj.wordpress.com/2014/05/13/vagrant-on-fedora-with-libvirt-reprise/
 
 * Only tested on Fedora 20 x86_64, but may work elsewhere
+
+* The current directory is the oh-my-vagrant check out, so 'vs' and other aliased vagrant commands work without having to change directories.
+
+* You'll still need to import vagrant boxes with a command like this:
+  vagrant box add http://file.example.com/vagrant/rhel-7.0/rhel-7.0.box --name rhel-7.0
