@@ -10,8 +10,13 @@ Build
 docker build -t vagrant_libvirt:latest .
 
 
-Run
-===
+Run From Docker Hub (recommended)
+=================================
+docker run --rm --privileged=true --net=host -v /var/lib/libvirt:/var/lib/libvirt -v /var/run/libvirt:/var/run/libvirt -v /var/lib/ctr-vagrant-libvirt:/persistent-data -ti twiest/docker-vagrant-libvirt
+
+
+Run From Manual Build
+=====================
 docker run --rm --privileged=true --net=host -v /var/lib/libvirt:/var/lib/libvirt -v /var/run/libvirt:/var/run/libvirt -v /var/lib/ctr-vagrant-libvirt:/persistent-data -ti vagrant_libvirt
 
 
