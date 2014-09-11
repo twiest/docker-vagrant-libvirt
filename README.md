@@ -1,7 +1,9 @@
 docker-vagrant-libvirt
 ======================
 
-A docker container for vagrant-libvirt
+A docker container for vagrant-libvirt. Basically, I put these instructions into a docker container (except I used the embedded vagrant ruby instead of rvm).
+
+https://ttboj.wordpress.com/2014/05/13/vagrant-on-fedora-with-libvirt-reprise/
 
 Build
 =====
