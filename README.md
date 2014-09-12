@@ -28,6 +28,8 @@ docker run --rm --privileged=true --net=host -v /var/lib/libvirt:/var/lib/libvir
 
 Notes
 =====
+* Use the accompanying enter-container.sh script from outside of the running container to be able to have multiple terminals into the same container.
+
 * The docker image is fairly big (docker says it has a "virtual size" of 1.5G)
 
 * This container has to run with --net=host so that vagrant can talk to the launched VMs
